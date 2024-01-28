@@ -4,17 +4,18 @@ heading: Get in touch today
 description: We'd love to help you improve your sales.
 
 map:
-  latitude: -45.8787605
-  longitude: 170.5027976
-  address: "1 George Street, Dunedin, New Zealand"
-  zoom: 13
+  latitude: 18.516726
+  longitude: 73.856255
+  address: "113, Wing B, Durvankur Society, Kharadi, Pune, Maharashtra, India - 411014"
+  <!-- zoom: 13 -->
 ---
 <div class="map" id="map"></div>
 
 
 <div class="contact-box">
-	<form action="{{ site.baseurl }}/contact-success/" method="post" class="contact-form">
-		<input type="hidden" name="_to" value="support@example.com" />
+	<form action="https://api.web3forms.com/submit" method="post" class="contact-form">
+		<input type="hidden" name="access_key" value="ce503637-ca7d-43cb-8246-df8105f5a46f">
+
 		<input type="text" name="_gotcha" style="display: none;">
 
 		<label for="name">Full Name</label>
@@ -31,12 +32,13 @@ map:
 
 	<div class="contact-details">
 		<h3 class="editable">Address</h3>
-		<address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></address>
+		<!-- <address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></address> -->
 
 		<h3 class="editable">Email</h3>
 		<p><a href="mailto:support@example.com">support@arithmo.co</a></p>
 	</div>
 </div>
+<script src="https://web3forms.com/client/script.js" async defer></script>
 
 <script type="text/javascript">
 	window.mapData = {{ page.map | jsonify }};
