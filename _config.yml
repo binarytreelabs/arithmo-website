@@ -13,12 +13,12 @@ logo: /images/logo-symbol.png
 description: e-commerce analytics platform
 author:
   name:
-  email:
+  email: hello@arithmo.co
   twitter: # twitter username without the @ symbol
 social:
-  name: Hydra Template
+  name: Arithmo
   links:
-    - https://github.com/CloudCannon/hydra-jekyll-template
+    - https://github.com/binarytreelabs
 
 # -----
 # Build
