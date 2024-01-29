@@ -1,84 +1,88 @@
 ---
 title: Pricing
-heading: Find the perfect plan for your business
-description: All plans include our award winning sales optimization solution to track your sales in real time.
+heading: Discover affordable pricing plans for Arithmo
+description: Choose the right plan for your business needs and budget. Start you data journey today!
 pricing_table:
-  - name: Basic
-    color: "#8e8e8e"
+  - name: Free
+    color: "#3cd3d3"
     features:
-      - text: $25 per month
+      - text: Free
         highlight: true
-      - text: Up to 5 users
+      - text: Real-time KPI and Profit dashboard
         highlight: false
-      - text: Basic lead scoring
+      - text: Integrate with Facebook & Google ad
         highlight: false
-      - text: CRM
+      - text: Data limited to last 30 days
         highlight: false
-      - text: Basic reporting
+      - text: x
         highlight: false
-      - text: Sales map
+      - text: x
+        highlight: false
+      - text: x
         highlight: false
     call_to_action:
-      link: http://mysite.com?plan=basic
+      link: http://arithmo.co?plan=free
       text: Get started
-  - name: Pro
-    color: "#4a4a4a"
+  - name: Starter
+    color: "#ffd339"
     features:
       - text: $99 per month
         highlight: true
-      - text: Everything in Basic
+      - text: All FREE features
         highlight: false
-      - text: Up to 25 users
+      - text: Daily P&L report email
         highlight: false
-      - text: Advanced lead scoring
+      - text: One-time or recurring costs
         highlight: false
-      - text: Pipeline management
+      - text: Industry benchmarks
         highlight: false
-      - text: Advanced reporting
+      - text: Unlimited ad integrations
+        highlight: false
+      - text: Complete historical data
         highlight: false
     call_to_action:
-      link: http://mysite.com?plan=pro
+      link: http://arithmo.co?plan=starter
       text: Get started
-  - name: Professional
-    color: "#000000"
+  - name: Growth
+    color: "#00d1ff"
     features:
       - text: $299 per month
         highlight: true
-      - text: Everything in Basic and Pro
+      - text: Everything in Free and Basic
         highlight: false
-      - text: Up to 100 users
+      - text: Self serve analytics
         highlight: false
-      - text: Campaign builder
+      - text: Comprehensive LTV analytics
         highlight: false
-      - text: Machine learning
+      - text: CAC payback calculator
         highlight: false
-      - text: Calendar
+      - text: 5+ Customer behavior reports
+        highlight: false
+      - text: ShipStation and ReCharge integrations
         highlight: false
     call_to_action:
-      link: http://mysite.com?plan=professional
+      link: http://arithmo.co?plan=pro
       text: Get started
 faq:
   - question: What types of payment do you accept?
     answer: Credit cards including MasterCard, Visa or American Express.
   - question: Can I change my plan at a later time?
     answer: Yes, you can upgrade and downgrade your plan at anytime.
-  - question: Do you offer pricing for nonprofit organizations?
-    answer: Yes, send us a message and we'll set you up on our nonprofit pricing.
   - question: Questions?
-    answer: Contact us for any further questions at <a href="#">john@business.com</a>.
+    answer: Contact us for any further questions at <a href="mailto:support@arithmo.co">support@arithmo.co</a>.
 ---
 <div class="plans">
 	{% for plan in page.pricing_table %}
 		<ul class="plan">
-			<li style="background: {{ plan.color }}">
-				<h3>{{ plan.name }}</h3>
+			<li style="background: {{ plan.color }};font-size: xx-large">
+        {{ plan.name }}
 			</li>
 			{% for feature in plan.features %}
 				<li {% if feature.highlight %} class="highlighted"{% endif %}>{{ feature.text }}</li>
 			{% endfor %}
 
 			{% if plan.call_to_action %}
-				<li class="pricing-cta"><div class="button"><a style="background: {{ plan.color }}" href="{{ plan.call_to_action.link }}">{{ plan.call_to_action.text }} &rarr;</a></div></li>
+				<li class="pricing-cta"><div class="button"><a style="background: {{ plan.color }};font-size:x-large;color:black; " href="{{ plan.call_to_action.link }}">{{ plan.call_to_action.text }} &rarr;</a></div></li>
 			{% endif %}
 		</ul>
 	{% endfor %}
